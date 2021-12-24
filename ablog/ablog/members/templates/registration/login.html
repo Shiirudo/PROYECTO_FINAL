@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Iniciar Sesión{% endblock  %}
+{% block content %}
+
+
+
+<h1>Inicio de Sesión 🌎BloogODS</h1>
+<br/><br/>
+
+<div class="small">
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary">Iniciar Sesión</button>
+</div
+
+
+
+{% endblock  %}
