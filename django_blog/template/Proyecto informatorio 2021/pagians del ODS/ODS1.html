@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                   <ul>
+                     <li><a href="#">Inicio</a></li>
+                     <li><a href="#">¿Cuales son los ODS?</a></li>
+                     <li><a href="#">Foro</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 1: Poner fin a la pobreza en todas sus formas en todo el mundo</h1>
+
+            <p>A nivel mundial, el número de personas que viven en situación de extrema pobreza disminuyó desde un 36 % en 1990 hasta un 10 % en 2015. No obstante, el ritmo al que se produce este cambio está disminuyendo, y la crisis de la COVID-19 pone en riesgo décadas de progreso en la lucha contra la pobreza. Una nueva investigación publicada por el Instituto Mundial de Investigaciones de Economía del Desarrollo de la Universidad de las Naciones Unidas advierte de que las consecuencias económicas de la pandemia mundial podrían incrementar la pobreza en todo el mundo hasta llegar a afectar a 500 millones de personas más, o lo que es lo mismo, a un 8 % más de la población total mundial. Esta sería la primera vez que la pobreza aumente en todo el mundo en 30 años, desde 1990.</p>
+
+            <p>Más de 700 millones de personas, o el 10 % de la población mundial, aún vive en situación de extrema pobreza a día de hoy, con dificultades para satisfacer las necesidades más básicas, como la salud, la educación y el acceso a agua y saneamiento, por nombrar algunas. La mayoría de las personas que viven con menos de 1,90 dólares al día viven en el África subsahariana. En todo el mundo, los índices de pobreza en las áreas rurales son del 17,2 %; más del triple de los mismos índices para las áreas urbanas.</p>
+
+            <img src=" {% static 'img/pobreza.jpg' %}" alt="">
+
+            <p>Para los que trabajan, su puesto de trabajo no les garantiza una vida digna. De hecho, el 8 % de los trabajadores de todo el mundo, y sus familias, vivían en situación de extrema pobreza en 2018. Uno de cada cinco niños vive en situación de extrema pobreza. Garantizar la protección social de todos los niños y otros grupos vulnerables resulta crucial para reducir la pobreza.</p>
+        </article>

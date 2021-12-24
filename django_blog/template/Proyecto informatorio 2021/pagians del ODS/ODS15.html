@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                {% include "base1.html" %}
+
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 15: Gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras, detener la pérdida de biodiversidad</h1>
+
+            <p>El brote de la COVID-19 resalta la necesidad de abordar las amenazas a las que se enfrentan las especies silvestres y los ecosistemas.
+
+            En 2016, el Programa de las Naciones Unidas para el Medio Ambiente (PNUMA) alertó de que un aumento mundial de las epidemias zoonóticas era motivo de preocupación. En concreto, señaló que el 75 % de todas las enfermedades infecciosas nuevas en humanos son zoonóticas y que dichas enfermedades están estrechamente relacionadas con la salud de los ecosistemas.
+
+            «Con la COVID-19, el planeta ha enviado su mayor alerta hasta la fecha indicando que la humanidad debe cambiar», ha explicado la Directora Ejecutiva del PNUMA, Inger Andersen.
+
+            En Trabajar con el medio ambiente para proteger a las personas, el PNUMA detalla cómo «reconstruir mejor», mediante una base científica más sólida, políticas que contribuyan a un planeta más sano y más inversiones verdes.</p>
+
+                <img src="{% static 'img/ecosistema.jpg' %}" alt="">
+
+                <p>La respuesta del PNUMA se ocupa de cuatro áreas:
+                <br>
+                <br>
+                Ayudar a las naciones a gestionar los desechos médicos de la COVID-19.
+                <br>
+                <br>
+                Producir un cambio transformativo para la naturaleza y las personas.
+                <br>
+                <br>
+                Trabajar para garantizar que los paquetes de recuperación económica creen resiliencia para crisis futuras.
+                <br>
+                <br>
+                Modernizar la gobernanza ambiental a nivel mundial.
+                <br>
+                <br>
+                Para prevenir, detener y revertir la degradación de los ecosistemas de todo el mundo, las Naciones Unidas han declarado la Década para la Restauración de los Ecosistemas (2021-2030). Esta respuesta coordinada a nivel mundial ante la pérdida y degradación de los hábitats se centrará en desarrollar la voluntad y la capacidad políticas para restaurar la relación de los seres humanos con la naturaleza. Asimismo, se trata de una respuesta directa al aviso de la ciencia, tal y como se expresa en el Informe especial sobre cambio climático y tierra del Grupo Intergubernamental de Expertos sobre el Cambio Climático, a las decisiones adoptadas por todos los Estados Miembros de las Naciones Unidas en las convenciones de Río sobre cambio climático y biodiversidad y a la Convención de las Naciones Unidas para la Lucha contra la Desertificación.
+
+                Se sigue trabajando en un nuevo y ambicioso Marco mundial de diversidad biológica posterior a 2020.
+
+               Mientras el mundo responde a la actual pandemia y se recupera de ella, necesitará un plan sólido destinado a la protección de la naturaleza, de manera que la naturaleza pueda proteger a la humanidad.
+            </p>
+        </article>

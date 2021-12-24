@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                {% include "base1.html" %}
+
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 3: Garantizar una vida sana y promover el bienestar para todos en todas las edades</h1>
+
+            <p>Garantizar una vida sana y promover el bienestar en todas las edades es esencial para el desarrollo sostenible.
+
+             Actualmente, el mundo se enfrenta a una crisis sanitaria mundial sin precedentes; la COVID-19 está propagando el sufrimiento humano, desestabilizando la economía mundial y cambiando drásticamente las vidas de miles de millones de personas en todo el mundo</p>
+
+            <img src="{% static 'img/saludbiene.jpg' %}" alt="">
+
+          <p>Antes de la pandemia, se consiguieron grandes avances en la mejora de la salud de millones de personas. En concreto, estos grandes avances se alcanzaron al aumentar la esperanza de vida y reducir algunas de las causas de muerte comunes asociadas con la mortalidad infantil y materna. Sin embargo, se necesitan más esfuerzos para erradicar por completo una gran variedad de enfermedades y abordar un gran número de problemas de salud, tanto constantes como emergentes. A través de una financiación más eficiente de los sistemas sanitarios, un mayor saneamiento e higiene, y un mayor acceso al personal médico, se podrán conseguir avances significativos a la hora de ayudar a salvar las vidas de millones de personas.
+
+          Las emergencias sanitarias, como la derivada de la COVID-19, suponen un riesgo mundial y han demostrado que la preparación es vital. El Programa de las Naciones Unidas para el Desarrollo señaló las grandes diferencias relativas a las capacidades de los países para lidiar con la crisis de la COVID-19 y recuperarse de ella. La pandemia constituye un punto de inflexión en lo referente a la preparación para las emergencias sanitarias y la inversión en servicios públicos vitales del siglo XXI.</p>
+        </article>

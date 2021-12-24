@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                {% include "base1.html" %}
+
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 6: Garantizar la disponibilidad de agua y su gestión sostenible y el saneamiento para todos</h1>
+
+            <p>Si bien se ha conseguido progresar de manera sustancial a la hora de ampliar el acceso a agua potable y saneamiento, existen miles de millones de personas (principalmente en áreas rurales) que aún carecen de estos servicios básicos. En todo el mundo, una de cada tres personas no tiene acceso a agua potable salubre, dos de cada cinco personas no disponen de una instalación básica destinada a lavarse las manos con agua y jabón, y más de 673 millones de personas aún defecan al aire libre.</p>
+
+
+            <img src="{% static 'img/aguay saneamiento.jpg' %}" alt="">
+
+            <p>La pandemia de la COVID-19 ha puesto de manifiesto la importancia vital del saneamiento, la higiene y un acceso adecuado a agua limpia para prevenir y contener las enfermedades. La higiene de manos salva vidas. De acuerdo con la Organización Mundial de la Salud, el lavado de manos es una de las acciones más efectivas que se pueden llevar a cabo para reducir la propagación de patógenos y prevenir infecciones, incluido el virus de la COVID-19. Aun así, hay miles de millones de personas que carecen de acceso a agua salubre y saneamiento, y los fondos son insuficientes.
+
+            Respuesta al COVID-19</p>
+        </article>

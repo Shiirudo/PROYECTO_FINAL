@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                {% include "base1.html" %}
+
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 11: Lograr que las ciudades sean más inclusivas, seguras, resilientes y sostenibles</h1>
+
+            <p>El mundo cada vez está más urbanizado. Desde 2007, más de la mitad de la población mundial ha estado viviendo en ciudades, y se espera que dicha cantidad aumente hasta el 60 % para 2030.
+
+            Las ciudades y las áreas metropolitanas son centros neurálgicos del crecimiento económico, ya que contribuyen al 60 % aproximadamente del PIB mundial. Sin embargo, también representan alrededor del 70 % de las emisiones de carbono mundiales y más del 60 % del uso de recursos.
+
+            La rápida urbanización está dando como resultado un número creciente de habitantes en barrios pobres, infraestructuras y servicios inadecuados y sobrecargados (como la recogida de residuos y los sistemas de agua y saneamiento, carreteras y transporte), lo cual está empeorando la contaminación del aire y el crecimiento urbano incontrolado.</p>
+
+
+            <img src="{% static 'img/sostenible.jpg' %}" alt="">
+
+            <p>El impacto de la COVID-19 será más devastador en las zonas urbanas pobres y densamente pobladas, especialmente para el mil millón de personas que vive en asentamientos informales y en barrios marginales en todo el mundo, donde el hacinamiento también dificulta cumplir con las medidas recomendadas, como el distanciamiento social y el autoaislamiento.
+
+            El organismo de las Naciones Unidas para los alimentos, la FAO, advirtió de que el hambre y las muertes podrían aumentar de manera significativa en las zonas urbanas que no cuentan con medidas para garantizar que los residentes pobres y vulnerables tengan acceso a alimentos.</p>
+        </article>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                {% include "base1.html" %}
+
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 14: Conservar y utilizar sosteniblemente los océanos, los mares y los recursos marinos</h1>
+
+            <p>LEl océano impulsa los sistemas mundiales que hacen de la Tierra un lugar habitable para el ser humano. Nuestra lluvia, el agua potable, el tiempo, el clima, los litorales, gran parte de nuestra comida e incluso el oxígeno del aire que respiramos los proporciona y regula el mar.
+
+            Una gestión cuidadosa de este recurso mundial esencial es una característica clave de un futuro sostenible. No obstante, en la actualidad, existe un deterioro continuo de las aguas costeras debido a la contaminación y a la acidificación de los océanos que está teniendo un efecto adverso sobre el funcionamiento de los ecosistemas y la biodiversidad. Asimismo, también está teniendo un impacto perjudicial sobre las pesquerías de pequeña escala.</p>
+
+
+            <img src="{% static 'img/agua.jpg' %}" alt="">
+
+           <p>Proteger nuestros océanos debe seguir siendo una prioridad. La biodiversidad marina es vital para la salud de las personas y de nuestro planeta. Las áreas marinas protegidas se deben gestionar de manera efectiva, al igual que sus recursos, y se deben poner en marcha reglamentos que reduzcan la sobrepesca, la contaminación marina y la acidificación de los océanos.
+
+           Respuesta al COVID-19</p>
+        </article>

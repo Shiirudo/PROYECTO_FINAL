@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                {% include "base1.html" %}
+
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 12: Garantizar modalidades de consumo y producción sostenibles</h1>
+
+            <p>El consumo y la producción mundiales (fuerzas impulsoras de la economía mundial) dependen del uso del medio ambiente natural y de los recursos de una manera que continúa teniendo efectos destructivos sobre el planeta.
+
+            El progreso económico y social conseguido durante el último siglo ha estado acompañado de una degradación medioambiental que está poniendo en peligro los mismos sistemas de los que depende nuestro desarrollo futuro (y ciertamente, nuestra supervivencia).</p>
+
+                <img src="{% static 'img/responsable.jpg' %}" alt="">
+
+            <p>Estos son algunos hechos y cifras:
+
+            Cada año, se estima que un tercio de toda la comida producida (el equivalente a 1300 millones de toneladas con un valor cercano al billón de dólares) acaba pudriéndose en los cubos de basura de los consumidores y minoristas, o estropeándose debido a un transporte y unas prácticas de recolección deficientes.
+            Si todo el mundo cambiase sus bombillas por unas energéticamente eficientes, se ahorrarían 120 000 millones de dólares estadounidenses al año.
+            En caso de que la población mundial alcance los 9600 millones de personas en 2050, se podría necesitar el equivalente a casi tres planetas para proporcionar los recursos naturales necesarios para mantener los estilos de vida actuales.
+            La pandemia de la COVID-19 ofrece a los países la oportunidad de elaborar planes de recuperación que reviertan las tendencias actuales y cambien nuestros patrones de consumo y producción hacia un futuro más sostenible.
+
+            El consumo y la producción sostenibles consisten en hacer más y mejor con menos. También se trata de desvincular el crecimiento económico de la degradación medioambiental, aumentar la eficiencia de recursos y promover estilos de vida sostenibles.
+
+            El consumo y la producción sostenibles también pueden contribuir de manera sustancial a la mitigación de la pobreza y a la transición hacia economías verdes y con bajas emisiones de carbono.</p>
+        </article>

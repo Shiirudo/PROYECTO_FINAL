@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                     <li><a href="{% url 'index' %}">Inicio</a></li>
+                     {% if user.is_authenticated %}
+                     <li><a href="{% url 'logout' %}">Cerrar Sesion</a></li>
+                     {% else %}
+                     <li><a href="{% url 'login' %}">Iniciar Sesion</a></li>
+                     {% endif %}
+                     <li><a href="{% url 'QueeselODS' %}">¿Cuales son los ODS?</a></li>
+                     <li><a href="{% url 'foro' %}">Foro</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <!--Portada-->
+
+    <div class="container-all" id="move-content">
+
+    
+    <div class="container-cover">
+        <div class="container-info-cover">
+            <h1>¡Todo es posible!</h1>
+        </div>
+    </div>
+
+    <div class="container-content">
+        <article>
+
+            <h1>¿QUÉ SON LOS OBJETIVOS DE DESARROLLO SOSTENIBLE?</h1>
+
+            <p>Los Objetivos de Desarrollo Sostenible, también conocidos como Objetivos Mundiales, se adoptaron por todos los Estados Miembros en 2015 como un llamado universal para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas gocen de paz y prosperidad para 2030.
+
+            Los 17 ODS están integrados, ya que reconocen que las intervenciones en un área afectarán los resultados de otras y que el desarrollo debe equilibrar la sostenibilidad medio ambiental, económica y social.</p>
+
+            <p>Siguiendo la promesa de no dejar a nadie atrás, los países se han comprometido a acelerar el progreso para aquellos más atrasados. Es por esto que los ODS han sido diseñados para traer al mundo varios “ceros” que cambien la vida, lo que incluye pobreza cero, hambre cero, SIDA cero y discriminación cero contra las mujeres y niñas.
+
+            Todo el mundo es necesario para alcanzar estos objetivos ambiciosos. Se necesita la creatividad, el conocimiento, la tecnología y los recursos financieros de toda la sociedad para conseguir los ODS en cada contexto. </p>
+
+                <h1>¿CUÁL ES LA FUNCIÓN DEL PNUD?</h1>
+
+                <p>Como principal organismo de las Naciones Unidas para el desarrollo, el PNUD tiene una posición única para ayudar a implementar los Objetivos a través de nuestro trabajo en unos 170 países y territorios. Apoyamos a países a conseguir los ODS con soluciones integradas. Los desafíos complejos actuales, que van desde detener el avance de las enfermedades hasta prevenir el conflicto, no se pueden tratar de forma eficiente aisladamente. Para el PNUD esto significa centrarse en sistemas, causas profundas y conexiones entre desafíos, no solo sectores temáticos, para crear soluciones que respondan a las realidades diarias de las personas.</p>
+
+                <img src="{% static 'img/img2.jpg' %}" alt="">
+
+                <p>Nuestra trayectoria trabajando con los Objetivos nos ha dotado de una experiencia valiosa y probados conocimientos normativos que nos permitirán a todos alcanzar las metas establecidas en los ODS de aquí a 2030. Sin embargo, no podemos hacerlo solos.
+
+                Conseguir los ODS requiere la colaboración de los gobiernos, el sector privado, la sociedad civil y los ciudadanos por igual para asegurar que dejaremos un planeta mejor a las generaciones futuras. </p>
+        </article>
+
+        <div class="container-aside">	
+
+            <aside>
+                <img src="{% static 'img/123.jpg' %}" alt="">
+                <h2>arreglar que sea ultimo post</h2>
+                <p></p>
+                <a href="#"><button>leer más</button></a>
+            </aside>
+
+            <aside>
+                <img src="{% static 'img/123.jpg' %}" alt="">
+                <h2>arreglar que sea ultimo post</h2>
+                <p> </p>
+                <a href="#"><button>leer más</button></a>
+            </aside>
+
+            <aside>
+                <img src="{% static 'img/123.jpg' %}" alt="">
+                <h2>arreglar que sea ultimo post</h2>
+                <p></p>
+                <a href="#"><button>leer más</button></a>
+            </aside>
+
+        </div>
+    </div>
+
+    <div class="container-footer">	
+
+        <footer>
+            <div class="logo-footer">
+                <img src="{% static 'img/logoinformatorio.png' %}" alt="">
+            </div>
+
+            <div class="redes-footer">
+                <a href="https://www.facebook.com/informatorio"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="https://www.instagram.com/informatorio/"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+
+            <hr>
+            <h4>© 2021 Informatorio Chaco</h4>
+
+        </footer>
+
+    </div>
+
+</div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                {% include "base1.html" %}
+
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 10: Reducir la desigualdad en y entre los países</h1>
+
+            <p>Reducir las desigualdades y garantizar que nadie se queda atrás forma parte integral de la consecución de los Objetivos de Desarrollo Sostenible.
+
+            La desigualdad dentro de los países y entre estos es un continuo motivo de preocupación. A pesar de la existencia de algunos indicios positivos hacia la reducción de la desigualdad en algunas dimensiones, como la reducción de la desigualdad de ingresos en algunos países y el estatus comercial preferente que beneficia a los países de bajos ingresos, la desigualdad aún continúa.
+
+            La COVID-19 ha intensificado las desigualdades existentes y ha afectado más que nadie a los pobres y las comunidades más vulnerables. Ha sacado a la luz las desigualdades económicas y las frágiles redes de seguridad social que hacen que las comunidades vulnerables tengan que sufrir las consecuencias de la crisis.  Al mismo tiempo, las desigualdades sociales, políticas y económicas han amplificado los efectos de la pandemia.</p>
+
+            <img src="{% static 'img/desigualdades.jpg' %}" alt="">
+
+            <p>En el frente económico, la pandemia de la COVID-19 ha aumentado significativamente el desempleo mundial y ha recortado drásticamente los ingresos de los trabajadores.
+
+            La COVID-19 también pone en riesgo los escasos avances que se han conseguido en materia de igualdad de género y derechos de las mujeres durante las últimas décadas. Prácticamente en todos los ámbitos, desde la salud hasta la economía, desde la seguridad hasta la protección social, los efectos de la COVID-19 han agravado la situación de las mujeres y las niñas simplemente como consecuencia de su sexo.
+
+            Las desigualdades también están aumentando para las poblaciones vulnerables en países con sistemas sanitarios más deficientes y en países que se enfrentan a crisis humanitarias existentes. Los refugiados y los migrantes, así como los pueblos indígenas, los ancianos, las personas con discapacidad y los niños se encuentran especialmente en riesgo de ser excluidos. Además, el discurso de odio dirigido a los grupos vulnerables está en aumento.</p>
+        </article>

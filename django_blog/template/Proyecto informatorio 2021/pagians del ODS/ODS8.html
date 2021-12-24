@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog informatorio 2021</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+ 
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                {% include "base1.html" %}
+
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div class="container-content">
+        <article>
+
+            <h1>Objetivo 8: Promover el crecimiento económico inclusivo y sostenible, el empleo y el trabajo decente para todos</h1>
+
+            <p>Un crecimiento económico inclusivo y sostenido puede impulsar el progreso, crear empleos decentes para todos y mejorar los estándares de vida.
+
+             La COVID-19 ha alterado miles de millones de vidas y ha puesto en peligro la economía mundial. El Fondo Monetario Internacional (FMI) prevé una recesión mundial tan mala o peor que la de 2009. A medida que se intensifica la pérdida de empleo, la Organización Internacional del Trabajo estima que cerca de la mitad de todos los trabajadores a nivel mundial se encuentra en riesgo de perder sus medios de subsistencia.</p>
+
+            <img src="{% static 'img/creciemiento.jpg' %}" alt="">
+
+            <p>Incluso antes del brote de la COVID-19, era probable que uno de cada cinco países (en donde habitan miles de millones de personas que viven en situación de pobreza) vieran sus ingresos per cápita estancarse o reducirse en 2020. A día de hoy, las perturbaciones económicas y financieras derivadas de la COVID-19 (como las alteraciones en la producción industrial, la caída de los precios de los productos básicos, la volatilidad del mercado financiero y el aumento de la inseguridad) están desbaratando el ya de por sí tibio crecimiento económico y empeorando los riesgos acentuados de otros factores.</p>
+        </article>

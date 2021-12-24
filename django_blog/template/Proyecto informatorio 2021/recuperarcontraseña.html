@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Recuperar contraseña</title>
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+  </head>
+<header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Blog<b>ODS</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                     <li><a href="{% url 'index' %}">Inicio</a></li>
+                     <li><a href="{% url 'QueeselODS' %}">¿Cuales son los ODS?</a></li>
+                     <li><a href="pagina del foro/foro.html">Foro</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+  <div class="login-box">
+      <h1>Recuperar contraseña</h1>
+      <form>
+        <!-- USERNAME INPUT -->
+        <label for="username">Usuario</label>
+        <input type="text" placeholder="Ingresa tu usuario">
+        <!-- PASSWORD INPUT -->
+        <label for="e-mail">Ingresa tu correo</label>
+        <input type="e-mail" placeholder="Ingresa tu correo">
+        <input type="submit" value="Recuperar contraseña">
+        <a href="{% url 'Registrarme' %}">No tienes una cuenta?, Registrate</a>
+      </form>
+    </div>
+  </body>
+</html>
