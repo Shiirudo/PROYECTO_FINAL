@@ -8,7 +8,10 @@
 
 <ul>
 {% for post in object_list %}
-    <li><a href="{% url 'article-detail' post.pk %}">{{post.title}}</a> - {{post.author.first_name}} {{post.author.last_name}} - 
+    <li><a href="{% url 'article-detail' post.pk %}">{{post.title}}</a> 
+        
+        - {{ post.category }}
+        - {{post.author.first_name}} {{post.author.last_name}} - 
         (📅{{ post.post_date }}) - <small>
             
             {% if user.is_authenticated %}
@@ -16,7 +19,7 @@
             {% endif %}
         
     </small></a><br/>
-    {{post.body|slice:":200" }}</li>
+    {{post.body|slice:":200"|safe }}</li>
 {% endfor %}
 </ul>
 
