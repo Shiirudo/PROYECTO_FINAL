@@ -2,16 +2,16 @@
 
 {% block content %}
 
+{% if  category_posts %}
 
+    <h1>📰{{ cats }} </h1>
 
-<h1>Posteos🗣️</h1>
-<hr>
-<ul>
-{% for post in object_list %}
+    <ul>
+    {% for post in category_posts %}
     <li><a href="{% url 'article-detail' post.pk %}">{{post.title}}</a> 
+            
         
-        - <a href="{% url 'category' post.category|slugify %}">📰{{ post.category }}</a>
-        - (👤{{post.author.username}} {{post.author.last_name}}) - 
+        - (👤{{post.author.first_name}} {{post.author.last_name}}) - 
         (📅{{ post.post_date }}) - <small>
             
             {% if user.is_authenticated %}
@@ -20,9 +20,13 @@
         
     </small></a><br/>
     {{post.body|slice:":200"|safe }}</li>
-{% endfor %}
-</ul>
-<hr>
+    {% endfor %}
+    </ul>
 
+
+    
+{% else %}
+    <h2> Está página no existe o la categoría no tiene ninguna publicación...🤷🔧 </h2>
+{% endif %}
 
 {% endblock  %}

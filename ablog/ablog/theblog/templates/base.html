@@ -24,29 +24,55 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 
+
+                    <!--category menu code-->
+                    {% if cat_menu %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categorias📚
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                            {% for item in cat_menu %}
+                                <a class="dropdown-item" href="{% url 'category' item|slugify %}">{{item}}</a>
+                            {% endfor %}
+
+
+                            
+                        </div>
+                    </li>
+
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'category-list' %}">📖Categorias</a>
+                        </li>
+                    
+                    {% endif %}
+                
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'add_post' %}">Añadir Post</a>
+                    <a class="nav-link" href="{% url 'add_post' %}">📝Añadir Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'add_category' %}">Añadir Categoría</a>
+                    <a class="nav-link" href="{% url 'add_category' %}">📙Añadir Categoría</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+                    <a class="nav-link" href="{% url 'logout' %}">🏃Cerrar Sesión</a>
                 </li>
 
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}">Registrarse</a>
+                        <a class="nav-link" href="{% url 'register' %}">✒️Registrarse</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+                        <a class="nav-link" href="{% url 'login' %}">👋Iniciar Sesión</a>
                     </li>
                 {% endif %}
-
-
+                
+            
 
                 
                 
