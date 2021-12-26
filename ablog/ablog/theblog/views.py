@@ -38,6 +38,10 @@ class AddPostView(CreateView):
     form_class = PostForm
     template_name = 'add_post.html'
     #fields = '__all__'
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 class AddCategoryView(CreateView):
     model = Category
