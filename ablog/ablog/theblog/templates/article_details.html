@@ -4,18 +4,21 @@
 
 
 {% block content %}
-
+<small>Sesión iniciada en: {{ user.username }}#{{user.id}}</small>
 <h1>{{ post.title }}</h1>
-<small>By:
+<small>De:
+    {{ post.author.username }}#{{post.author.id}}
     {{ post.author.first_name }}
-    {{post.author.last_name}} - 
+    {{post.author.last_name}} -
     📅{{ post.post_date }} -
     <a href="{% url 'category' post.category%}">(📰{{ post.category }})</a>
 
     {% if user.is_authenticated %}
-        <a href="{% url 'update_post' post.pk %}">(Editar✍️)</a>
+        {% if user.id == post.author.id %}
+            <a href="{% url 'update_post' post.pk %}">(Editar✍️)</a>
 
-        <a href="{% url 'delete_post' post.pk %}">(Borrar🗑️)</a>
+            <a href="{% url 'delete_post' post.pk %}">(Borrar🗑️)</a>
+        {% endif %}
     {% endif %}
 </small><br/>
 <hr>

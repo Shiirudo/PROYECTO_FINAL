@@ -4,21 +4,25 @@
 
 
 {% if user.is_authenticated %}
-    <h1>Eliminar un Post de BloogODS</h1>
-    <br/><br/>
-    <h3>Borrar el Post: "{{ post.title }}"</h3>
+    {% if user.id == post.author.id %}
+        <h1>Eliminar un Post de BloogODS</h1>
+        <br/><br/>
+        <h3>Borrar el Post: "{{ post.title }}"</h3>
 
-    <br/>
-    <div class="small">
-    <div class="form-group">
-        <form method="POST">
-            {% csrf_token %}
-            <strong>¡¿Estás seguro que querer eliminar este Post?!</strong><br/><br/>
-            <button class="btn btn-danger">Borrar Post</button>
-    </div
+        <br/>
+        <div class="small">
+        <div class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                <strong>¡¿Estás seguro que querer eliminar este Post?!</strong><br/><br/>
+                <button class="btn btn-danger">Borrar Post</button>
+        </div
+    {% else %}
+        <h1>¿Qué haces aquí? No eres el author de este post... 🤨📸 (Este Post no te pertenece) 🚓<h1>
+    {% endif %}
 {% else %}
 
-¿Qué haces aquí? No puedes estar aquí... 🤨📸 (Este Post no te pertenece o estás desconectado) 🚓
+    <h1>Debes iniciar sesión para eliminar este post...👨‍💻👋 (Estás desconectado) 🚓<h1>
 
 {% endif %}
 

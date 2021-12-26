@@ -15,7 +15,9 @@
         (📅{{ post.post_date }}) - <small>
             
             {% if user.is_authenticated %}
-                - <a href="{% url 'update_post' post.pk %}">(Editar✍️)
+                {% if user.id == post.author.id %}
+                    - <a href="{% url 'update_post' post.pk %}">(Editar✍️)
+                {% endif %}
             {% endif %}
         
     </small></a><br/>
