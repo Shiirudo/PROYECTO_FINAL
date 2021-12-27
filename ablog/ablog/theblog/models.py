@@ -20,6 +20,10 @@ class Post(models.Model):
     body = models.TextField()
     post_date =  models.DateField(auto_now_add=True)
     category = models.CharField(max_length=255, default='Otras...')
+    likes = models.ManyToManyField(User, related_name='blog_posts')
+
+    def total_likes(self):
+        return self.likes.count() 
 
     def __str__(self):
         return self.title + ' | ' + str(self.author) 
@@ -27,3 +31,7 @@ class Post(models.Model):
     def get_absolute_url(self):
         #return reverse('article-detail', args=(str(self.id))) #Ver el post creado
         return reverse('home') #Volver a inicio
+
+
+#1-ejecutar en git bash: --> python manage.py makemigrations <-- luego de crear un class Post(models.Model)
+#2-ejecutar en git bash: --> python manage.py migrate <-- luego de ejecutar "python manage.py makemigrations"

@@ -4,30 +4,49 @@
 
 
 {% block content %}
-<small>Sesión iniciada en: {{ user.username }}#{{user.id}}</small>
-<h1>{{ post.title }}</h1>
-<small>De:
-    {{ post.author.username }}#{{post.author.id}}
-    {{ post.author.first_name }}
-    {{post.author.last_name}} -
-    📅{{ post.post_date }} -
-    <a href="{% url 'category' post.category%}">(📰{{ post.category }})</a>
+    <small>Sesión iniciada en: {{ user.username }}#{{user.id}}</small>
+    <h1>{{ post.title }}</h1>
+    <small>De:
+        {{ post.author.username }}#{{post.author.id}}
+        {{ post.author.first_name }}
+        {{post.author.last_name}} -
+        📅{{ post.post_date }} -
+        👍{{ total_likes }}
+        <a href="{% url 'category' post.category%}">(📰{{ post.category }})</a> -
 
-    {% if user.is_authenticated %}
-        {% if user.id == post.author.id %}
-            <a href="{% url 'update_post' post.pk %}">(Editar✍️)</a>
+        {% if user.is_authenticated %}
+            {% if user.id == post.author.id %}
+                <a href="{% url 'update_post' post.pk %}">(Editar✍️)</a>
 
-            <a href="{% url 'delete_post' post.pk %}">(Borrar🗑️)</a>
+                <a href="{% url 'delete_post' post.pk %}">(Borrar🗑️)</a>
+            {% endif %}
         {% endif %}
+    </small><br/>
+    <hr>
+    <br/>
+    {{ post.body|safe }}
+
+
+    <br/><br/>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Atrás</a>
+
+    <br/><br/>
+    <hr>
+    <br/>
+    <form action="{% url 'like_post' post.pk %}" method="POST">
+        {% csrf_token %}
+    {% if user.is_authenticated %}
+        {% if liked %}
+            <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-sm">Quitar Me Gusta</button>
+        {% else %}
+            <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Dar Me Gusta</button>
+        
+        {% endif %}
+    {% else %}
+        Debes <a href="{% url 'login' %}">👋Iniciar Sesión</a> para dar un Me Gusta 👨‍💻
     {% endif %}
-</small><br/>
-<hr>
-<br/>
-{{ post.body|safe }}
-
-
-<br/><br/>
-<a href="{% url 'home' %}" class="btn btn-secondary">back</a>
+        - 👍 {{ total_likes }}
+    </form>
 
 
 {% endblock  %}

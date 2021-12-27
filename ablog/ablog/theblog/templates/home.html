@@ -12,11 +12,11 @@
         
         - <a href="{% url 'category' post.category|slugify %}">📰{{ post.category }}</a>
         - (👤{{post.author.username}} {{post.author.last_name}}) - 
-        (📅{{ post.post_date }}) - <small>
+        (📅{{ post.post_date }}) -  <small>
             
             {% if user.is_authenticated %}
                 {% if user.id == post.author.id %}
-                    - <a href="{% url 'update_post' post.pk %}">(Editar✍️)
+                    <a href="{% url 'update_post' post.pk %}">(Editar✍️)
                 {% endif %}
             {% endif %}
         
