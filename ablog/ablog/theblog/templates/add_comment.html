@@ -3,7 +3,7 @@
 {% block content %}
 
 
-{% if user.is_authenticated %}
+
     <h1>Añadir un Post en 🌎BloogODS</h1>
     <br/><br/>
 
@@ -14,11 +14,5 @@
             {{ form.as_p }}
             <button class="btn btn-primary">Comentar 💬</button>
     </div
-{% else %}
-
-No puedes comentar si estás desconectado 🤪
-
-{% endif %}
-
 
 {% endblock  %}
