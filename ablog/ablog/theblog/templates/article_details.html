@@ -48,5 +48,24 @@
         - 👍 {{ total_likes }}
     </form>
 
+<br/><br/>
+<hr>
+<h2>Comentarios. . .💬</h2>
+<small>
+{% if not post.comments.all %}
+    <h6>Nadie ha comentado este Post aún...😔 ¡Rápido! Escribe: "Primero" 🤡<a href="#"> Sé el primero en comentar.</a></h6>
+{% else %}
+    {% for comment in post.comments.all %}
+        <strong>
+            {{ comment.name}} - 
+            {{ comment.date_added }}
+        </strong>
+        <br/>
+        {{ comment.body }}
+        <br/><br/>
+</small>
+    {% endfor %}
+{% endif %}
+<hr>
 
 {% endblock  %}

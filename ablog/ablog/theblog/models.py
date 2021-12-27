@@ -36,5 +36,14 @@ class Post(models.Model):
         return reverse('home') #Volver a inicio
 
 
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
+    name = models.CharField(max_length=255 )
+    body = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' %(self.post.title, self.name)
+
 #1-ejecutar en git bash: --> python manage.py makemigrations <-- luego de crear un class Post(models.Model)
 #2-ejecutar en git bash: --> python manage.py migrate <-- luego de ejecutar "python manage.py makemigrations"
