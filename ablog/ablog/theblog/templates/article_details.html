@@ -53,8 +53,12 @@
 <h2>Comentarios. . .💬</h2>
 <small>
 {% if not post.comments.all %}
-    <h6>Nadie ha comentado este Post aún...😔 ¡Rápido! Escribe: "Primero" 🤡<a href="#"> Sé el primero en comentar.</a></h6>
+    <h6>Nadie ha comentado este Post aún...😔 ¡Rápido! Escribe: "Primero" 🤡<a href="{% url 'add_comment' post.pk %}"> Sé el primero en comentar.</a></h6>
 {% else %}
+
+<a href="{% url 'add_comment' post.pk %}">Añadir un Comentario...💬</a>
+<br/><br/>
+
     {% for comment in post.comments.all %}
         <strong>
             {{ comment.name}} - 
@@ -64,6 +68,7 @@
         {{ comment.body }}
         <br/><br/>
 </small>
+        <a href="{% url 'add_comment' post.pk %}">Añadir un Comentario...💬</a>
     {% endfor %}
 {% endif %}
 <hr>
